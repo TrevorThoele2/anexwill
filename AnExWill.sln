@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inscription", "..\Inscripti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnExWill", "AnExWill\AnExWill.vcxproj", "{2CBCC5FB-9EE5-4955-BEF0-A01563095C30}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chroma", "..\Chroma\Chroma\Chroma.vcxproj", "{11D859BD-185B-40E3-9EBA-0FA17D6FD187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -86,8 +88,23 @@ Global
 		{2CBCC5FB-9EE5-4955-BEF0-A01563095C30}.Release|Win32.Build.0 = Release|Win32
 		{2CBCC5FB-9EE5-4955-BEF0-A01563095C30}.Release|x64.ActiveCfg = Release|x64
 		{2CBCC5FB-9EE5-4955-BEF0-A01563095C30}.Release|x64.Build.0 = Release|x64
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Debug|Win32.ActiveCfg = Debug|Win32
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Debug|Win32.Build.0 = Debug|Win32
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Debug|x64.ActiveCfg = Debug|x64
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Debug|x64.Build.0 = Debug|x64
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release Debug|Win32.ActiveCfg = Release Debug|Win32
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release Debug|Win32.Build.0 = Release Debug|Win32
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release Debug|x64.ActiveCfg = Release Debug|x64
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release Debug|x64.Build.0 = Release Debug|x64
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release|Win32.ActiveCfg = Release|Win32
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release|Win32.Build.0 = Release|Win32
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release|x64.ActiveCfg = Release|x64
+		{11D859BD-185B-40E3-9EBA-0FA17D6FD187}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3EA10330-5891-4D3A-9821-B3BD1A169B6F}
 	EndGlobalSection
 EndGlobal
