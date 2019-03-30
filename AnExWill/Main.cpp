@@ -1,13 +1,13 @@
 
-//#include <vld.h>
 #include <locale>
 #include <codecvt>
 
 #include <Atmos\GameEnvironment.h>
 #include <Atmos\Windows.h>
-#include <falcon\engine.h>
 
 #include <Inscription\BinaryScribe.h>
+
+//#include <vld.h>
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
