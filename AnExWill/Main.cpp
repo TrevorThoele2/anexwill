@@ -2,22 +2,20 @@
 #include <locale>
 #include <codecvt>
 
-#include <Atmos\GameEnvironment.h>
-#include <Atmos\Windows.h>
-
-#include <Inscription\BinaryScribe.h>
+#include <Atmos/WindowsEngine.h>
 
 //#include <vld.h>
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    Atmos::FilePath worldPath;
-    std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
-    int argCount;
+    ::Atmos::FilePath worldPath;
 
     // Load the world given
     {
-        LPWSTR *szArgList;
+        int argCount;
+        std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
+
+        LPWSTR* szArgList;
 
         szArgList = CommandLineToArgvW(GetCommandLineW(), &argCount);
         if (szArgList == nullptr || argCount < 2)
@@ -31,8 +29,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         LocalFree(szArgList);
     }
 
-    Atmos::GameEnvironment::LoadWorld(worldPath.GetValue());
-    Atmos::Environment::Setup<Atmos::Windows>(hInstance, lpCmdLine, nCmdShow, "AnExWill");
-    Atmos::Environment::StartExecution();
+    ::Atmos::WindowsEngine engine(hInstance, lpCmdLine, nCmdShow, "AnExWill");
+    engine.Setup();
+    engine.LoadWorld(worldPath.GetValue());
+    engine.StartExecution();
+
     return 0;
 }
