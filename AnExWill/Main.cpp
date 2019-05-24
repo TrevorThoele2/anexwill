@@ -4,7 +4,9 @@
 
 #include <Atmos/WindowsEngine.h>
 
-//#include <vld.h>
+#ifdef ATMOS_DEBUG
+    #include <vld.h>
+#endif
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
