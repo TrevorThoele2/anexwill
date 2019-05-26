@@ -18,6 +18,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chroma", "..\Chroma\Chroma\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtmosTests", "..\AtmosTests\AtmosTests\AtmosTests.vcxproj", "{00C98AD1-BDDE-4FDD-8007-6AF0E048C9E2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestFramework", "..\TestFramework\TestFramework\TestFramework.vcxproj", "{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -102,6 +104,18 @@ Global
 		{00C98AD1-BDDE-4FDD-8007-6AF0E048C9E2}.Release|Win32.ActiveCfg = Release|Win32
 		{00C98AD1-BDDE-4FDD-8007-6AF0E048C9E2}.Release|x64.ActiveCfg = Release|x64
 		{00C98AD1-BDDE-4FDD-8007-6AF0E048C9E2}.Release|x64.Build.0 = Release|x64
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Debug|Win32.Build.0 = Debug|Win32
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Debug|x64.ActiveCfg = Debug|x64
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Debug|x64.Build.0 = Debug|x64
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release Debug|Win32.ActiveCfg = Release|Win32
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release Debug|Win32.Build.0 = Release|Win32
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release Debug|x64.ActiveCfg = Release|x64
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release Debug|x64.Build.0 = Release|x64
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release|Win32.ActiveCfg = Release|Win32
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release|Win32.Build.0 = Release|Win32
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release|x64.ActiveCfg = Release|x64
+		{2CD5963B-8857-4AF5-ADEF-9374AA1BA6EC}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
