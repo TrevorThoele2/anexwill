@@ -1,40 +1,44 @@
-
 #include <locale>
 #include <codecvt>
 
 #include <Atmos/WindowsEngine.h>
 
-#ifdef ATMOS_DEBUG
-    #include <vld.h>
-#endif
+std::optional<Atmos::File::Path> WorldPath()
+{
+    int argCount;
+    std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
+
+    const auto szArgList = CommandLineToArgvW(GetCommandLineW(), &argCount);
+    if (szArgList == nullptr || argCount < 2)
+        return {};
+
+    auto returnValue = std::string(converter.to_bytes(std::wstring(szArgList[1])));
+
+    LocalFree(szArgList);
+
+    return returnValue;
+}
+
+void StartEngineExecution(Atmos::WindowsEngine& engine, const Atmos::File::Path& worldPath)
+{
+    engine.Setup();
+    engine.LoadWorld(worldPath, worldPath);
+    engine.StartExecution();
+}
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    ::Atmos::FilePath worldPath;
+    //auto worldPath = WorldPath();
+    std::optional<std::filesystem::path> worldPath = std::filesystem::current_path() / "1.atw";
 
-    // Load the world given
+    if (!worldPath)
     {
-        int argCount;
-        std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
-
-        LPWSTR* szArgList;
-
-        szArgList = CommandLineToArgvW(GetCommandLineW(), &argCount);
-        if (szArgList == nullptr || argCount < 2)
-        {
-            MessageBox(nullptr, L"A world file has not been supplied.", L"Error", MB_OK);
-            return 0;
-        }
- 
-        worldPath = std::string(converter.to_bytes(std::wstring(szArgList[1])));
-
-        LocalFree(szArgList);
+        MessageBox(nullptr, L"A world file needs to be supplied.", L"Error", MB_OK);
+        return 0;
     }
 
-    ::Atmos::WindowsEngine engine(hInstance, lpCmdLine, nCmdShow, "AnExWill");
-    engine.Setup();
-    engine.LoadWorld(worldPath.GetValue());
-    engine.StartExecution();
+    Atmos::WindowsEngine engine(hInstance, lpCmdLine, nCmdShow, "AnExWill");
+    StartEngineExecution(engine, *worldPath);
 
     return 0;
 }
