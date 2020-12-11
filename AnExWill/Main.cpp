@@ -2,8 +2,10 @@
 #include <codecvt>
 
 #include <Atmos/WindowsEngine.h>
+#include <Atmos/AssetsFileExtension.h>
+#include <Atmos/Logger.h>
 
-std::optional<Atmos::File::Path> WorldPath()
+/*std::optional<Atmos::File::Path> WorldPath()
 {
     int argCount;
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
@@ -17,28 +19,52 @@ std::optional<Atmos::File::Path> WorldPath()
     LocalFree(szArgList);
 
     return returnValue;
+}*/
+
+std::optional<Atmos::File::Path> WorldPath()
+{
+    return "C:\\Users\\Trevor\\Documents\\ProgrammingProjects\\AnExWill\\Working\\1.atw";
 }
 
 void StartEngineExecution(Atmos::WindowsEngine& engine, const Atmos::File::Path& worldPath)
 {
+    auto assetsPath = worldPath;
+    assetsPath.replace_extension(Atmos::World::Serialization::assetsFileExtension);
+
     engine.Setup();
-    engine.LoadWorld(worldPath, worldPath);
+    engine.LoadWorld(worldPath, assetsPath);
     engine.StartExecution();
 }
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    //auto worldPath = WorldPath();
-    std::optional<std::filesystem::path> worldPath = std::filesystem::current_path() / "1.atw";
+    Atmos::Logging::Logger logger(Atmos::Logging::Severity::Verbose);
 
-    if (!worldPath)
+    try
     {
-        MessageBox(nullptr, L"A world file needs to be supplied.", L"Error", MB_OK);
-        return 0;
-    }
+        auto worldPath = WorldPath();
 
-    Atmos::WindowsEngine engine(hInstance, lpCmdLine, nCmdShow, "AnExWill");
-    StartEngineExecution(engine, *worldPath);
+        if (!worldPath)
+        {
+            MessageBox(nullptr, L"A world file needs to be supplied.", L"Error", MB_OK);
+            return 0;
+        }
+
+        Atmos::WindowsEngine engine(hInstance, lpCmdLine, nCmdShow, "AnExWill", logger);
+        StartEngineExecution(engine, *worldPath);
+    }
+    catch (const std::exception & e)
+    {
+        logger.Log(
+            e.what(),
+            Atmos::Logging::Severity::Error);
+    }
+    catch(...)
+    {
+        logger.Log(
+            "Unknown error.",
+            Atmos::Logging::Severity::Error);
+    }
 
     return 0;
 }
