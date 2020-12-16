@@ -5,7 +5,7 @@
 #include <Atmos/AssetsFileExtension.h>
 #include <Atmos/Logger.h>
 
-/*std::optional<Atmos::File::Path> WorldPath()
+std::optional<Atmos::File::Path> WorldPath()
 {
     int argCount;
     std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
@@ -19,11 +19,6 @@
     LocalFree(szArgList);
 
     return returnValue;
-}*/
-
-std::optional<Atmos::File::Path> WorldPath()
-{
-    return "C:\\Users\\Trevor\\Documents\\ProgrammingProjects\\AnExWill\\Working\\1.atw";
 }
 
 void StartEngineExecution(Atmos::WindowsEngine& engine, const Atmos::File::Path& worldPath)

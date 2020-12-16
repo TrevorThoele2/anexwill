@@ -1,24 +1,18 @@
 
 Total count
-PSF        : 4
-RET        : 1
-CALLSYS    : 3
-SUSPEND    : 2
-ALLOC      : 1
-GETOBJ     : 1
-PGA        : 1
-VAR        : 1
 
 Never executed
 PopPtr    
 PshGPtr   
 PshC4     
 PshV4     
+PSF       
 SwapPtr   
 NOT       
 PshG4     
 LdGRdR4   
 CALL      
+RET       
 JMP       
 JZ        
 JNZ       
@@ -69,10 +63,14 @@ JMPP
 PopRPtr   
 PshRPtr   
 STR       
+CALLSYS   
 CALLBND   
+SUSPEND   
+ALLOC     
 FREE      
 LOADOBJ   
 STOREOBJ  
+GETOBJ    
 REFCPY    
 CHKREF    
 GETOBJREF 
@@ -102,7 +100,9 @@ RDR4
 RDR8      
 LDG       
 LDV       
+PGA       
 CmpPtr    
+VAR       
 iTOf      
 fTOi      
 uTOf      
@@ -205,16 +205,3 @@ POWu64
 Thiscall1 
 
 Sequences
-PSF       , CALLSYS    : 2
-PSF       , ALLOC      : 1
-PSF       , PGA        : 1
-CALLSYS   , PSF        : 1
-CALLSYS   , SUSPEND    : 1
-CALLSYS   , VAR        : 1
-SUSPEND   , PSF        : 1
-SUSPEND   , RET        : 1
-ALLOC     , PSF        : 1
-GETOBJ    , CALLSYS    : 1
-PGA       , PSF        : 1
-VAR       , GETOBJ     : 1
-LABEL     , SUSPEND    : 1
