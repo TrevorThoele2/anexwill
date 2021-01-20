@@ -1,8 +1,9 @@
-#include <locale>
+#include <optional>
 
 #include <Atmos/SDLEngine.h>
 #include <Atmos/AssetsFileExtension.h>
 #include <Atmos/Logger.h>
+#include <Atmos/FileLoggingSink.h>
 #include <SDL.h>
 
 std::optional<Atmos::File::Path> WorldPath(int argc, char* argv[])
@@ -18,7 +19,6 @@ void StartEngineExecution(Atmos::SDLEngine& engine, const Atmos::File::Path& wor
     auto assetsPath = worldPath;
     assetsPath.replace_extension(Atmos::World::Serialization::assetsFileExtension);
 
-    engine.Setup();
     engine.LoadWorld(worldPath, assetsPath);
     engine.StartExecution();
 }
@@ -26,6 +26,7 @@ void StartEngineExecution(Atmos::SDLEngine& engine, const Atmos::File::Path& wor
 int main(int argc, char* argv[])
 {
     Atmos::Logging::Logger logger(Atmos::Logging::Severity::Verbose);
+    logger.Add<Atmos::Logging::FileSink>();
 
     try
     {
