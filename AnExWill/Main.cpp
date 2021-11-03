@@ -8,12 +8,10 @@
 
 std::optional<Atmos::File::Path> WorldPath(int argc, char* argv[])
 {
-    return "C:\\Users\\lordi\\Documents\\ProgrammingProjects\\creation\\Working\\an_ex_will_data\\worlds\\1.atw";
-
-    /*if (argc < 2 || argv == nullptr)
+    if (argc < 2 || argv == nullptr)
         return {};
 
-    return argv[1];*/
+    return argv[1];
 }
 
 void StartEngineExecution(Atmos::SDLEngine& engine, const Atmos::File::Path& worldPath)
