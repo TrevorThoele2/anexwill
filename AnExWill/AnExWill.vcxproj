@@ -38,27 +38,27 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Debug2|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -75,11 +75,11 @@
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Debug|Win32'">
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Debug|x64'" Label="Configuration">
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -108,8 +108,8 @@
     <OutDir>$(SolutionDir)\Working\</OutDir>
     <TargetName>$(ProjectName)_debug</TargetName>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\..\chroma;..\..\inscription;..\..\arca;..\..\atmos;..\..\externaldependencies\sdl2\include;..\..\externaldependencies\boost;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\externaldependencies\sdl2\lib\x86;..\..\externaldependencies\sdl_mixer\lib\x86;..\..\externaldependencies\vulkan\Lib32;..\..\externaldependencies\freeimage\Dist\x32;..\..\externaldependencies\angelscript\angelscript\lib;..\..\externaldependencies\wxwidgets\lib\vc_lib;..\..\externaldependencies\boost\stage\lib;..\..\externaldependencies\sdl_ttf\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\chroma;..\..\inscription;..\..\arca;..\..\atmos;..\..\externaldependencies\sdl2\include;..\..\externaldependencies\boost;..\..\externaldependencies\function2\include;..\..\externaldependencies\v8\v8\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\externaldependencies\sdl2\lib\x86;..\..\externaldependencies\sdl_mixer\lib\x86;..\..\externaldependencies\vulkan\Lib32;..\..\externaldependencies\freeimage\Dist\x32;..\..\externaldependencies\angelscript\angelscript\lib;..\..\externaldependencies\wxwidgets\lib\vc_lib;..\..\externaldependencies\boost\stage\lib;..\..\externaldependencies\sdl_ttf\lib\x86;..\..\externaldependencies\v8\v8\out.gn\ia32.debug\obj;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Users\Trevor\Documents\Programming Projects\Affecter;C:\Users\Trevor\Documents\Programming Projects\AGUI;C:\Users\Trevor\Documents\Programming Projects\Chroma;C:\Users\Trevor\Documents\Programming Projects\Inscription;C:\Users\Trevor\Documents\Programming Projects\Atmos;C:\Users\Trevor\Documents\Programming Projects\Ogg\Built\include;C:\Users\Trevor\Documents\Programming Projects\wxWidgets2\include;C:\Users\Trevor\Documents\Programming Projects\wxWidgets2\lib\vc_lib\mswud;C:\Program Files %28x86%29\Falcon\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
@@ -118,8 +118,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\Working\</OutDir>
-    <IncludePath>..\..\chroma;..\..\inscription;..\..\arca;..\..\atmos;..\..\externaldependencies\sdl2\include;..\..\externaldependencies\boost;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\externaldependencies\sdl2\lib\x86;..\..\externaldependencies\sdl_mixer\lib\x86;..\..\externaldependencies\vulkan\Lib32;..\..\externaldependencies\freeimage\Dist\x32;..\..\externaldependencies\angelscript\angelscript\lib;..\..\externaldependencies\wxwidgets\lib\vc_lib;..\..\externaldependencies\boost\stage\lib;..\..\externaldependencies\sdl_ttf\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\chroma;..\..\inscription;..\..\arca;..\..\atmos;..\..\externaldependencies\sdl2\include;..\..\externaldependencies\boost;C:\Program Files %28x86%29\Intel\oneAPI\vtune\2021.9.0\sdk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\externaldependencies\sdl2\lib\x86;..\..\externaldependencies\sdl_mixer\lib\x86;..\..\externaldependencies\vulkan\Lib32;..\..\externaldependencies\freeimage\Dist\x32;..\..\externaldependencies\angelscript\angelscript\lib;..\..\externaldependencies\wxwidgets\lib\vc_lib;..\..\externaldependencies\boost\stage\lib;..\..\externaldependencies\sdl_ttf\lib\x86;..\..\externaldependencies\v8\v8\out.gn\ia32.release\obj;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Users\Trevor\Documents\Programming Projects\Affecter;C:\Users\Trevor\Documents\Programming Projects\AGUI;C:\Users\Trevor\Documents\Programming Projects\Chroma;C:\Users\Trevor\Documents\Programming Projects\Inscription;C:\Users\Trevor\Documents\Programming Projects\Atmos;C:\Users\Trevor\Documents\Programming Projects\Ogg\Built\include;C:\Users\Trevor\Documents\Programming Projects\wxWidgets2\include;C:\Users\Trevor\Documents\Programming Projects\wxWidgets2\lib\vc_lib\mswud;C:\Program Files %28x86%29\Falcon\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
@@ -150,7 +150,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_ttf.lib;vulkan-1.lib;freeimagelibd.lib;angelscriptd.lib;wxmsw31ud_core.lib;wxbase31ud.lib;wxmsw31ud_aui.lib;wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_ttf.lib;vulkan-1.lib;v8_monolith.lib;dbghelp.lib;Winmm.lib;freeimagelibd.lib;angelscriptd.lib;wxmsw31ud_core.lib;wxbase31ud.lib;wxmsw31ud_aui.lib;wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -169,6 +169,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>falcon_engine.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;wxmsw30ud_core.lib;wxbase30ud.lib;wxmsw30ud_aui.lib;wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/NODEFAULTLIB:libcmtd.lib %(AdditionalOptions)</AdditionalOptions>
+      <Profile>true</Profile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -185,10 +186,10 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_ttf.lib;angelscript.lib;vulkan-1.lib;freeimagelib.lib;wxmsw31u_core.lib;wxbase31u.lib;wxmsw31u_aui.lib;wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_ttf.lib;angelscript.lib;v8_monolith.lib;dbghelp.lib;Winmm.lib;vulkan-1.lib;freeimagelib.lib;wxmsw31u_core.lib;wxbase31u.lib;wxmsw31u_aui.lib;wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
