@@ -26,7 +26,7 @@ void StartEngineExecution(Atmos::SDLEngine& engine, const Atmos::File::Path& wor
 int main(int argc, char* argv[])
 {
     Atmos::Logging::Logger logger(Atmos::Logging::Severity::Verbose);
-    logger.Add<Atmos::Logging::FileSink>();
+    logger.AddSink<Atmos::Logging::FileSink>();
 
     try
     {
